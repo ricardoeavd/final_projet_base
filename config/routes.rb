@@ -27,16 +27,11 @@ Rails.application.routes.draw do
              
   #------------------------------
 
-# Homepage
-get("/user_diet_plan", {:controller => "users", :action => "index"})
+# Routes for the Diet Plan:
 
-
-# User routes
-get("/", {:controller => "users", :action => "sign_in"})
-post("/verify_credentials", {:controller => "users", :action => "verify_credentials"})
-get("/user_sign_up", {:controller => "users", :action => "new_registration_form"})
-get("/user_sign_out", {:controller => "users", :action => "sign_out"})
-get("/insert_user_record", {:controller => "users", :action => "create" })
+  # USER DIET PLAN
+  get("/", { :controller => "diet", :action => "show" })
+  
 
 
 end

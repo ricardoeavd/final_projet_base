@@ -1,5 +1,24 @@
 Rails.application.routes.draw do
 
+  # Routes for the Diet resource:
+
+  # CREATE
+  post("/insert_diet", { :controller => "diets", :action => "create" })
+          
+  # READ
+  get("/diets", { :controller => "diets", :action => "index" })
+  
+  get("/diets/:path_id", { :controller => "diets", :action => "show" })
+  
+  # UPDATE
+  
+  post("/modify_diet/:path_id", { :controller => "diets", :action => "update" })
+  
+  # DELETE
+  get("/delete_diet/:path_id", { :controller => "diets", :action => "destroy" })
+
+  #------------------------------
+
   # Routes for the User account:
 
   # SIGN UP FORM

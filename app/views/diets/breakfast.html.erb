@@ -22,6 +22,10 @@
           Portion Size
         </th>
 
+        <th>
+          Record your meal
+        </th>
+
       </tr>
 
       <% @list_of_diets.each do |a_diet| %>
@@ -49,6 +53,12 @@
           <%#= a_food_item.portion_size %>
         </td>
         
+        <td>
+        <form action="/insert_meal" method="post">
+          <button>
+            Click here
+          </button>
+        </form>
 
       </tr>
       <% end %>

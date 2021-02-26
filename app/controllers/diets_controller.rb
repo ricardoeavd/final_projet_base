@@ -16,9 +16,9 @@ class DietsController < ApplicationController
 
     if the_diet.valid?
       the_diet.save
-      redirect_to("/", { :notice => "Diet created successfully." })
+      redirect_to("/my_diet", { :notice => "Diet created successfully." })
     else
-      redirect_to("/", { :notice => "Diet failed to create successfully." })
+      redirect_to("/my_diet", { :notice => "Diet failed to create successfully." })
     end
   end
 
@@ -28,7 +28,7 @@ class DietsController < ApplicationController
 
     the_diet.destroy
 
-    redirect_to("/", { :notice => "Diet deleted successfully."} )
+    redirect_to("/my_diet", { :notice => "Diet deleted successfully."} )
   end
 
   def breakfast

@@ -36,12 +36,19 @@
         </td>
 
         <td>
-          Food Item
+          <label for="food_item"></label>
+
+            <select name="food_item" id="food_item">
+            <% Fooditem.where(:food_group_name => a_diet.food_group_name).each do |a_food_item| %>
+              <option value="<%= a_food_item.food_item_name%>"><%= a_food_item.food_item_name%></option>
+            <% end %>
+            </select>
         </td>
 
         <td>
-          Portion Size
+          <%#= a_food_item.portion_size %>
         </td>
+        
 
       </tr>
       <% end %>

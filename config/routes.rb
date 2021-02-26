@@ -3,10 +3,11 @@ Rails.application.routes.draw do
   # Routes for the Diet resource:
 
   # CREATE
-  post("/insert_diet", { :controller => "diets", :action => "create" })
+  post("/insert_diet_item", { :controller => "diets", :action => "create" })
+  get("/insert_diet_item", { :controller => "diets", :action => "create" })
           
   # READ
-  get("/diets", { :controller => "diets", :action => "index" })
+  get("/", { :controller => "diets", :action => "index" })
   
   get("/diets/:path_id", { :controller => "diets", :action => "show" })
   
@@ -45,12 +46,5 @@ Rails.application.routes.draw do
   get("/user_sign_out", { :controller => "user_authentication", :action => "destroy_cookies" })
              
   #------------------------------
-
-# Routes for the Diet Plan:
-
-  # USER DIET PLAN
-  get("/", { :controller => "diet", :action => "show" })
-  
-
 
 end

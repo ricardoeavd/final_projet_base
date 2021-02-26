@@ -14,26 +14,26 @@
       Add a new diet item
     </h2>
 
-    <form action="/insert_diet" method="post">
+    <form action="/insert_diet_item" method="post">
       <div>
         <label for="meal_name_box">
-          Meal name
+          Meal
         </label>
 
         <input type="text" id="meal_name_box" name="query_meal_name">
       </div>
 
       <div>
-        <label for="food_group_id_box">
-          Food group (Id)
+        <label for="food_group_name_box">
+          Food Group
         </label>
 
-        <input type="text" id="food_group_id_box" name="query_food_group_id">
+        <input type="text" id="food_group_name_box" name="query_food_group_name">
       </div>
 
       <div>
         <label for="portions_box">
-          Number of portions
+          Number of Portions
         </label>
 
         <input type="text" id="portions_box" name="query_portions">
@@ -57,11 +57,7 @@
         </th>
 
         <th>
-          Food Group Id
-        </th>
-
-        <th>
-          Food Group Name
+          Food Group
         </th>
 
         <th>
@@ -80,11 +76,7 @@
         </td>
 
         <td>
-          <%= a_diet.food_group_id %>
-        </td>
-
-        <td>
-          <%#= a_diet.food_group_name %>
+          <%= a_diet.food_group_name %>
         </td>
 
         <td>

@@ -20,15 +20,15 @@ class DietsController < ApplicationController
   def create
     the_diet = Diet.new
     the_diet.user_id = @current_user.id
-    the_diet.food_group_id = params.fetch("query_food_group_id")
+    the_diet.food_group_name = params.fetch("query_food_group_name")
     the_diet.portions = params.fetch("query_portions")
     the_diet.meal_name = params.fetch("query_meal_name")
 
     if the_diet.valid?
       the_diet.save
-      redirect_to("/diets", { :notice => "Diet created successfully." })
+      redirect_to("/", { :notice => "Diet created successfully." })
     else
-      redirect_to("/diets", { :notice => "Diet failed to create successfully." })
+      redirect_to("/", { :notice => "Diet failed to create successfully." })
     end
   end
 
@@ -55,6 +55,7 @@ class DietsController < ApplicationController
 
     the_diet.destroy
 
-    redirect_to("/diets", { :notice => "Diet deleted successfully."} )
+    redirect_to("/", { :notice => "Diet deleted successfully."} )
   end
 end
+

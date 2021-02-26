@@ -39,7 +39,7 @@ Rails.application.routes.draw do
   get("/insert_diet_item", { :controller => "diets", :action => "create" })
           
   # READ
-  get("/", { :controller => "diets", :action => "index" })
+  get("/my_diet", { :controller => "diets", :action => "index" })
   
   # DELETE
   get("/delete_diet/:path_id", { :controller => "diets", :action => "destroy" })
@@ -64,6 +64,7 @@ Rails.application.routes.draw do
   # ------------------------------
 
   # SIGN IN FORM
+  get("/", { :controller => "user_authentication", :action => "sign_in_form" })
   get("/user_sign_in", { :controller => "user_authentication", :action => "sign_in_form" })
   # AUTHENTICATE AND STORE COOKIE
   post("/user_verify_credentials", { :controller => "user_authentication", :action => "create_cookie" })
@@ -73,12 +74,10 @@ Rails.application.routes.draw do
              
   #------------------------------
 
- # Routes for the Meals:
+ # Other Routes:
 
-  # READ
+  # READ SPEFICIC MEALS
   get("/breakfast", { :controller => "diets", :action => "breakfast" })
   
-  # DELETE
-  get("/delete_diet/:path_id", { :controller => "diets", :action => "destroy" })
 
 end

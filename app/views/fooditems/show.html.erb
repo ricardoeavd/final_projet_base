@@ -1,0 +1,101 @@
+<div>
+  <div>
+    <h1>
+      Fooditem #<%= @the_fooditem.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <a href="/fooditems">
+          Go back
+        </a>
+      </div>
+
+      <div>
+        <a href="/delete_fooditem/<%= @the_fooditem.id %>">
+          Delete fooditem
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        Food group name
+      </dt>
+      <dd>
+        <%= @the_fooditem.food_group_name %>
+      </dd>
+
+      <dt>
+        Food item name
+      </dt>
+      <dd>
+        <%= @the_fooditem.food_item_name %>
+      </dd>
+
+      <dt>
+        Portion size
+      </dt>
+      <dd>
+        <%= @the_fooditem.portion_size %>
+      </dd>
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_fooditem.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_fooditem.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+
+<div>
+  <div>
+    <h2>
+      Edit fooditem
+    </h2>
+
+    <form action="/modify_fooditem/<%= @the_fooditem.id %>"  method="post" >
+      <div>
+        <label for="food_group_name_box">
+          Food group name
+        </label>
+
+        <input type="text" id="food_group_name_box" name="query_food_group_name" value="<%= @the_fooditem.food_group_name %>">
+      </div>
+
+      <div>
+        <label for="food_item_name_box">
+          Food item name
+        </label>
+
+        <input type="text" id="food_item_name_box" name="query_food_item_name" value="<%= @the_fooditem.food_item_name %>">
+      </div>
+
+      <div>
+        <label for="portion_size_box">
+          Portion size
+        </label>
+
+        <input type="text" id="portion_size_box" name="query_portion_size" value="<%= @the_fooditem.portion_size %>">
+      </div>
+
+      <button>
+        Update fooditem
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>

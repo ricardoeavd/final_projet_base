@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+ 
+  # Routes for the Fooditem resource:
+
+  # CREATE
+  post("/insert_fooditem", { :controller => "fooditems", :action => "create" })
+          
+  # READ
+  get("/fooditems", { :controller => "fooditems", :action => "index" })
+  
+  get("/fooditems/:path_id", { :controller => "fooditems", :action => "show" })
+  
+  # UPDATE
+  
+  post("/modify_fooditem/:path_id", { :controller => "fooditems", :action => "update" })
+  
+  # DELETE
+  get("/delete_fooditem/:path_id", { :controller => "fooditems", :action => "destroy" })
+
+  #------------------------------
 
   # Routes for the Diet resource:
 

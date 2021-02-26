@@ -1,0 +1,60 @@
+<h1>My Breakfast</h1>
+
+<hr>
+<div>
+  <div>
+    <table border="1">
+      <tr>
+
+        <th>
+          Food Group
+        </th>
+
+        <th>
+          Number of Portions
+        </th>
+
+        <th>
+          Food Item
+        </th>
+
+        <th>
+          Measurement Unit
+        </th>
+
+        <th>
+          Number of Units
+        </th>
+
+      </tr>
+
+      <% @list_of_diets.each do |a_diet| %>
+      <tr>
+     
+       <td>
+          <%= a_diet.food_group_name %>
+        </td>
+
+        <td>
+          <%= a_diet.portions %>
+        </td>
+
+        <td>
+          Food Item
+        </td>
+
+        <td>
+          Measurement Unit
+        </td>
+
+        <td>
+          Number of Units
+        </td>
+
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<hr>

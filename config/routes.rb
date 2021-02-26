@@ -9,12 +9,6 @@ Rails.application.routes.draw do
   # READ
   get("/", { :controller => "diets", :action => "index" })
   
-  get("/diets/:path_id", { :controller => "diets", :action => "show" })
-  
-  # UPDATE
-  
-  post("/modify_diet/:path_id", { :controller => "diets", :action => "update" })
-  
   # DELETE
   get("/delete_diet/:path_id", { :controller => "diets", :action => "destroy" })
 
@@ -46,5 +40,13 @@ Rails.application.routes.draw do
   get("/user_sign_out", { :controller => "user_authentication", :action => "destroy_cookies" })
              
   #------------------------------
+
+ # Routes for the Meals:
+
+  # READ
+  get("/breakfast", { :controller => "diets", :action => "breakfast" })
+  
+  # DELETE
+  get("/delete_diet/:path_id", { :controller => "diets", :action => "destroy" })
 
 end

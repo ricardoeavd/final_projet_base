@@ -7,16 +7,6 @@ class DietsController < ApplicationController
     render({ :template => "diets/index.html.erb" })
   end
 
-  def show
-    the_id = params.fetch("path_id")
-
-    matching_diets = Diet.where({ :id => the_id })
-
-    @the_diet = matching_diets.at(0)
-
-    render({ :template => "diets/show.html.erb" })
-  end
-
   def create
     the_diet = Diet.new
     the_diet.user_id = @current_user.id
@@ -32,23 +22,6 @@ class DietsController < ApplicationController
     end
   end
 
-  def update
-    the_id = params.fetch("path_id")
-    the_diet = Diet.where({ :id => the_id }).at(0)
-
-    the_diet.user_id = params.fetch("query_user_id")
-    the_diet.food_group_id = params.fetch("query_food_group_id")
-    the_diet.portions = params.fetch("query_portions")
-    the_diet.meal_name = params.fetch("query_meal_name")
-
-    if the_diet.valid?
-      the_diet.save
-      redirect_to("/diets/#{the_diet.id}", { :notice => "Diet updated successfully."} )
-    else
-      redirect_to("/diets/#{the_diet.id}", { :alert => "Diet failed to update successfully." })
-    end
-  end
-
   def destroy
     the_id = params.fetch("path_id")
     the_diet = Diet.where({ :id => the_id }).at(0)
@@ -57,5 +30,15 @@ class DietsController < ApplicationController
 
     redirect_to("/", { :notice => "Diet deleted successfully."} )
   end
+
+  def breakfast
+    matching_diets = Diet.where(:user_id => @current_user.id)
+
+    @list_of_diets = matching_diets.where({ :meal_name => "Breakfast" })
+
+    render({ :template => "diets/breakfast.html.erb" })
+  end
+
+
 end
 

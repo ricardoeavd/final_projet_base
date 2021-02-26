@@ -1,0 +1,146 @@
+<div>
+  <div>
+    <h1>
+      Meal #<%= @the_meal.id %> details
+    </h1>
+
+    <div>
+      <div>
+        <a href="/meals">
+          Go back
+        </a>
+      </div>
+
+      <div>
+        <a href="/delete_meal/<%= @the_meal.id %>">
+          Delete meal
+        </a>
+      </div>
+    </div>
+
+    <dl>
+      <dt>
+        User
+      </dt>
+      <dd>
+        <%= @the_meal.user_id %>
+      </dd>
+
+      <dt>
+        Meal name
+      </dt>
+      <dd>
+        <%= @the_meal.meal_name %>
+      </dd>
+
+      <dt>
+        Food group name
+      </dt>
+      <dd>
+        <%= @the_meal.food_group_name %>
+      </dd>
+
+      <dt>
+        Portions
+      </dt>
+      <dd>
+        <%= @the_meal.portions %>
+      </dd>
+
+      <dt>
+        Food item name
+      </dt>
+      <dd>
+        <%= @the_meal.food_item_name %>
+      </dd>
+
+      <dt>
+        Portion size
+      </dt>
+      <dd>
+        <%= @the_meal.portion_size %>
+      </dd>
+
+      <dt>
+        Created at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_meal.created_at) %> ago
+      </dd>
+
+      <dt>
+        Updated at
+      </dt>
+      <dd>
+        <%= time_ago_in_words(@the_meal.updated_at) %> ago
+      </dd>
+    </dl>
+  </div>
+</div>
+
+<hr>
+
+
+<div>
+  <div>
+    <h2>
+      Edit meal
+    </h2>
+
+    <form action="/modify_meal/<%= @the_meal.id %>"  method="post" >
+      <div>
+        <label for="user_id_box">
+          User
+        </label>
+
+        <input type="text" id="user_id_box" name="query_user_id" value="<%= @the_meal.user_id %>">
+      </div>
+
+      <div>
+        <label for="meal_name_box">
+          Meal name
+        </label>
+
+        <input type="text" id="meal_name_box" name="query_meal_name" value="<%= @the_meal.meal_name %>">
+      </div>
+
+      <div>
+        <label for="food_group_name_box">
+          Food group name
+        </label>
+
+        <input type="text" id="food_group_name_box" name="query_food_group_name" value="<%= @the_meal.food_group_name %>">
+      </div>
+
+      <div>
+        <label for="portions_box">
+          Portions
+        </label>
+
+        <input type="text" id="portions_box" name="query_portions" value="<%= @the_meal.portions %>">
+      </div>
+
+      <div>
+        <label for="food_item_name_box">
+          Food item name
+        </label>
+
+        <input type="text" id="food_item_name_box" name="query_food_item_name" value="<%= @the_meal.food_item_name %>">
+      </div>
+
+      <div>
+        <label for="portion_size_box">
+          Portion size
+        </label>
+
+        <input type="text" id="portion_size_box" name="query_portion_size" value="<%= @the_meal.portion_size %>">
+      </div>
+
+      <button>
+        Update meal
+      </button>
+    </form>
+  </div>
+</div>
+
+<hr>

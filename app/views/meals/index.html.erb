@@ -1,0 +1,84 @@
+<div>
+  <div>
+    <h1>
+      My Meal History
+    </h1>
+  </div>
+</div>
+
+<hr>
+
+<hr>
+<div>
+  <div>
+    <table border="1">
+      <tr>
+                
+        <th>
+          Date
+        </th>
+
+        <th>
+          Meal
+        </th>
+
+        <th>
+          Food Group
+        </th>
+
+        <th>
+          Number of Portions
+        </th>
+
+        <th>
+          Food Item
+        </th>
+
+        <th>
+          Portion Size
+        </th>
+
+
+        <th>
+        </th>
+      </tr>
+
+      <% @list_of_meals.each do |a_meal| %>
+      <tr>
+                
+        <td>
+          <%= a_meal.created_at.strftime("%b %d, %Y") %>
+        </td>
+
+        <td>
+          <%= a_meal.meal_name %>
+        </td>
+
+        <td>
+          <%= a_meal.food_group_name %>
+        </td>
+
+        <td>
+          <%= a_meal.portions %>
+        </td>
+
+        <td>
+          <%= a_meal.food_item_name %>
+        </td>
+
+        <td>
+          <%= a_meal.portion_size %>
+        </td>
+
+        <td>
+          <a href="/meals/<%= a_meal.id %>">
+            Show details
+          </a>
+        </td>
+      </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+<hr>

@@ -96,6 +96,10 @@
         </th>
 
         <th>
+          Updated at
+        </th>
+
+        <th>
         </th>
       </tr>
 
@@ -112,6 +116,10 @@
 
         <td>
           <%= a_diet.portions %>
+        </td>
+
+        <td>
+          <%= time_ago_in_words(a_diet.updated_at) %> ago
         </td>
 
         <td>

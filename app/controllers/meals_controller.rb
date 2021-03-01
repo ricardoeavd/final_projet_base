@@ -24,7 +24,7 @@ class MealsController < ApplicationController
     the_meal.food_group_name = params.fetch("query_food_group_name")
     the_meal.portions = params.fetch("query_portions")
     the_meal.food_item_name = params.fetch("query_food_item_name")
-    the_meal.portion_size = params.fetch("query_portion_size")
+    the_meal.portion_size = Fooditem.where({:food_item_name=>the_meal.food_item_name}).at(0).portion_size
 
     if the_meal.valid?
       the_meal.save

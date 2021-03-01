@@ -7,6 +7,10 @@
       <tr>
 
         <th>
+          Meal
+        </th>
+
+        <th>
           Food Group
         </th>
 
@@ -18,10 +22,24 @@
           Food Item
         </th>
 
+        <th>
+          
+        </th>
+
       </tr>
 
       <% @list_of_diets.each do |a_diet| %>
+
+      <form action="/insert_meal" method="post">
+        <input type="hidden" value ="Breakfast" id="meal_name_box" name="query_meal_name" class="form-control">
+        <input type="hidden" value =" <%= a_diet.food_group_name %>" id="food_group_name_box" name="query_food_group_name" class="form-control">
+        <input type="hidden" value ="<%= a_diet.portions %>" id="portions_box" name="query_portions" class="form-control">
+
       <tr>
+
+        <td>
+          Breakfast
+        </td>
      
        <td>
           <%= a_diet.food_group_name %>
@@ -32,17 +50,22 @@
         </td>
 
         <td>
-          <label for="food_item"></label>
+          <label for="query_food_item_name"></label>
 
-            <select name="food_item" id="food_item">
+            <select name="query_food_item_name" id="food_item_name_box">
             <% Fooditem.where(:food_group_name => a_diet.food_group_name).each do |a_food_item| %>
-              <option value="<%= a_food_item.food_item_name%>"><%= a_food_item.food_item_name%> - 
-              <%= a_food_item.portion_size%>
+              <option value="<%= a_food_item.food_item_name%>"><%= a_food_item.food_item_name%> - <%= a_food_item.portion_size%>>
               </option>
             <% end %>
             </select>
         </td>
-     
+         
+        <td>
+          <button>
+            Record Meal Log
+          </button>
+        </td>
+       </form>
       </tr>
       <% end %>
     </table>

@@ -1,0 +1,125 @@
+Food_Group_Name,Food_Item_Name,Portion_Size
+G2,Leite Desnatado,1 copo
+G2,Iogurte Desnatado,1 pote
+G2,Iogurte Integral,0,5 potes
+G2,Bebida Vegetal,1 copo
+G2,Proteina de whey,7g
+G2,Cottage,2 col sopa
+G2,Cream Cheese Light,1 col sopa 
+G2,Minas Light,3 fatias
+G2,Muzzarela,2 fatias
+G2,Muzzarela de Bufala,3 unidades
+G2,Queijo de Cabra,3 unidades
+G2,Tofu,1 fatia
+G2,Hummus,2 col sopa
+G2,Requeijao,1 col sopa 
+G2,Coalhada Seca,2 col sopa
+G2,Manteiga,1 col sobremesa
+G2,Tahini,1 col sobremesa
+G3,Semente de Abobora,1 col sopa
+G3,Barra de Proteina,0,5 barras
+G3,Ovo,1 unidade
+G3,Frango Desfiado,50g
+G3,Presunto Cru,2 fatias finas
+G4,Abacaxi,1 fatia media
+G4,Abacate,2 col sopa
+G4,Acai,3 col sopa
+G4,Ameixa,2 unidades
+G4,Banana,1 unidade
+G4,Caqui,0,5 unidades
+G4,Cereja,5 unidades
+G4,Figo,2 unidades
+G4,Fruta do Conde,1 unidade
+G4,Framboesa,1 pires de cha
+G4,Goiaba,1 unidade
+G4,Kiwi,2 unidades
+G4,Lichia,5 unidades
+G4,Maca,1 unidade
+G4,Mamao,0,5 unidades
+G4,Manga,0,5 unidades
+G4,Maracuja,1 unidade
+G4,Melancia,1 fatia
+G4,Morango,7 unidades
+G4,Pera,1 unidade
+G4,Pessego,1 unidade
+G4,Tamara,7 unidades
+G4,Uva,1 fatia
+G4,Salada de Frutas,1 concha
+G4,Agua de Coco,2 copos
+G4,Mel,1 col sopa
+G4,Geleia,1 col sopa
+G5,Batata Doce,2 col sopa
+G5,Batata,1,5 unidades
+G5,Milho,4 col sopa
+G5,Cereais Integrais,3 col sopa
+G5,Aveia Integral,3 col sopa
+G5,Arroz,2 col sopa
+G5,Quinoa,2 col sopa
+G5,Risoto,2 col sopa
+G5,Macarrao,3 col sopa
+G5,Farofa,2 col sopa
+G5,Sopa,1 prato fundo
+G6,Feijao,2 col sopa
+G6,Grao de Bico,2 col sopa
+G6,Lentilha,2 col sopa
+G6,Ervilha,3 col sopa
+G6,Soja,2 col sopa
+G6,Edamame,2 col sopa
+G7,Peito de Frango,1 file
+G7,Peixe,1 file
+G7,Sashimi,15 unidades
+G7,Carne Bovina,1 file
+G7,Carne Moida,3 col sopa
+G7,Ovo,2 unidades
+G7,Lula,1 pires de cha
+G7,Quibe,3 col sopa
+G7,Almondega,2 unidades
+G7,Rosbife,7 fatias
+G7,Carpaccio,6 fatias
+G7,Polvo,1 pires de cha
+G8,Acelga,1 prato
+G8,Agriao,1 prato
+G8,Alface,1 prato
+G8,Brotos,1 prato
+G8,Couve,1 prato
+G8,Endivias,1 prato
+G8,Escarola,1 prato
+G8,Espinafre,1 prato
+G8,Mostarda,1 prato
+G8,Repolho,1 prato
+G8,Rucula,1 prato
+G8,Salsao,1 prato
+G8,Palmito,1 unidade
+G9,Abobora,1 col servir
+G9,Aipo,1 col servir
+G9,Alcachofra,1 col servir
+G9,Abobrinha,1 col servir
+G9,Aspargos,1 col servir
+G9,Brocolis,1 col servir
+G9,Berinjela,1 col servir
+G9,Beterraba,1 col servir
+G9,Cenoura,1 col servir
+G9,Couve-Flor,1 col servir
+G9,Cogumelos,1 col servir
+G9,Couve de Bruxelas,1 col servir
+G9,Ervilha Torta,1 col servir
+G9,Pepino,1 col servir
+G9,Quiabo,1 col servir
+G9,Rabanete,1 col servir
+G9,Tomate,1 col servir
+G9,Vagem,1 col servir
+G10,Amendoas,10 unidades
+G10,Castanha de Caju,10 unidades
+G10,Avelas,10 unidades
+G10,Castanha do Para,6 unidades
+G10,Nozes,8 unidades
+G10,Macadamia,6 unidades
+G10,Amendoim,15 unidades
+G10,Semente de Abobora,1 col sopa 
+G10,Semente de Girassol,1 col sopa 
+G10,Pistache,12 unidades
+G10,Tahini,1 col sopa 
+G10,Bebida Vegetal,1 copo
+G10,Leite de Coco,1 col sopa 
+G10,Abacate,3 col sopa
+

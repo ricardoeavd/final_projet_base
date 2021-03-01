@@ -1,4 +1,4 @@
-<h1>My Breakfast</h1>
+<h1>My Dinner</h1>
 
 <hr>
 <div>
@@ -31,14 +31,14 @@
       <% @list_of_diets.each do |a_diet| %>
 
       <form action="/insert_meal" method="post">
-        <input type="hidden" value ="Breakfast" id="meal_name_box" name="query_meal_name" class="form-control">
+        <input type="hidden" value ="Dinner" id="meal_name_box" name="query_meal_name" class="form-control">
         <input type="hidden" value =" <%= a_diet.food_group_name %>" id="food_group_name_box" name="query_food_group_name" class="form-control">
         <input type="hidden" value ="<%= a_diet.portions %>" id="portions_box" name="query_portions" class="form-control">
 
       <tr>
 
         <td>
-          Breakfast
+          Dinner
         </td>
      
        <td>

@@ -39,6 +39,23 @@ class DietsController < ApplicationController
     render({ :template => "diets/breakfast.html.erb" })
   end
 
+  def lunch
+    matching_diets = Diet.where(:user_id => @current_user.id)
+
+    @list_of_diets = matching_diets.where({ :meal_name => "Lunch" })
+
+    render({ :template => "diets/lunch.html.erb" })
+  end
+
+  def dinner
+    matching_diets = Diet.where(:user_id => @current_user.id)
+
+    @list_of_diets = matching_diets.where({ :meal_name => "Dinner" })
+
+    render({ :template => "diets/dinner.html.erb" })
+  end
+
+
 
 end
 

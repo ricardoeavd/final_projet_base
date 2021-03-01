@@ -78,6 +78,8 @@ Rails.application.routes.draw do
 
   # READ SPEFICIC MEALS
   get("/breakfast", { :controller => "diets", :action => "breakfast" })
+  get("/lunch", { :controller => "diets", :action => "lunch" })
+  get("/dinner", { :controller => "diets", :action => "dinner" })
   
 
 end

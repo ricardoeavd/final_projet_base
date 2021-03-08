@@ -28,9 +28,9 @@ class MealsController < ApplicationController
 
     if the_meal.valid?
       the_meal.save
-      redirect_to("/meals", { :notice => "Meal created successfully." })
+      redirect_to("/" + the_meal.meal_name.downcase, { :notice => "Meal created successfully." })
     else
-      redirect_to("/meals", { :notice => "Meal failed to create successfully." })
+      redirect_to("/" + the_meal.meal_name.downcase, { :notice => "Meal failed to create successfully." })
     end
   end
 

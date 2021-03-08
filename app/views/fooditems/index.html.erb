@@ -8,43 +8,6 @@
 
 <hr>
 
-<div>
-  <div>
-    <h2>
-      Add a new food item
-    </h2>
-
-    <form action="/insert_fooditem" method="post">
-      <div>
-        <label for="food_group_name_box">
-          Food Group
-        </label>
-
-        <input type="text" id="food_group_name_box" name="query_food_group_name">
-      </div>
-
-      <div>
-        <label for="food_item_name_box">
-          Food Item
-        </label>
-
-        <input type="text" id="food_item_name_box" name="query_food_item_name">
-      </div>
-
-      <div>
-        <label for="portion_size_box">
-          Portion Size
-        </label>
-
-        <input type="text" id="portion_size_box" name="query_portion_size">
-      </div>
-
-      <button>
-        Add food item
-      </button>
-    </form>
-  </div>
-</div>
 
 <hr>
 <div>
@@ -63,9 +26,6 @@
           Portion Size
         </th>
 
-         <th>
-          
-        </th>
       </tr>
 
       <% @list_of_fooditems.each do |a_fooditem| %>
@@ -82,13 +42,7 @@
         <td>
           <%= a_fooditem.portion_size %>
         </td>
-
-        <td>
-          <a href="/delete_fooditem/<%= a_fooditem.id %>">
-            Delete food item
-          </a>
-        </td>
-
+        
       </tr>
       <% end %>
     </table>
